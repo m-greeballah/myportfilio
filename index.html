@@ -154,40 +154,6 @@
     <small>Live visits to this website</small>
 </div>
     </section>
-
-    <script>
-      async function updateCounter() {
-        try {
-          const response = await fetch(
-            "https://api.countapi.xyz/get/mohammed-hussein-devops/resume-site",
-          );
-
-          // If first time, initialize counter
-          if (response.status === 404) {
-            await fetch(
-              "https://api.countapi.xyz/create?namespace=mohammed-hussein-devops&key=resume-site&value=1",
-            );
-            document.getElementById("visitor-count").innerText = 1;
-            return;
-          }
-
-          const data = await response.json();
-
-          // increment count
-          const hit = await fetch(
-            "https://api.countapi.xyz/hit/mohammed-hussein-devops/resume-site",
-          );
-          const hitData = await hit.json();
-
-          document.getElementById("visitor-count").innerText = hitData.value;
-        } catch (error) {
-          document.getElementById("visitor-count").innerText = "Offline";
-          console.error("Visitor counter error:", error);
-        }
-      }
-
-      updateCounter();
-    </script>
     <footer>
       <p>© 2026 Mohammed Hussein. All rights reserved.</p>
     </footer>
