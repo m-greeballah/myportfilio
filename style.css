@@ -140,3 +140,31 @@ footer {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
+/* ===== Contact Page Cards ===== */
+.contact-card {
+    background: #0f172a;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+    text-align: center;
+    width: 60%;
+    transition: 0.3s;
+}
+
+.contact-card a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        width: 90%;
+    }
+}
